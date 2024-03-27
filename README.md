@@ -330,5 +330,8 @@ If you give them to an enderman or villager, don't expect to be able to see it.
 At this point, I can't even say for certain if they would have any effect,
 although I suspect the armor would still be functional.
 
-<center>_Thank you and enjoy the mod._</center>
 -------------------------------
+
+
+<center> *** Thank you and enjoy the mod. *** </center>
+
