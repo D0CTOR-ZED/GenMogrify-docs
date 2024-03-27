@@ -1,0 +1,138 @@
+[
+  {
+    "type": "block",
+    "tag": "minecraft:logs",
+    "result": "minecraft:iron_ore"
+  },
+  {
+    "type": "block",
+    "tag": "minecraft:leaves",
+    "result": {
+      "copyProperties": true,
+      "properties": {
+        "persistent": "true"
+      }
+    }
+  },
+  {
+    "block": "minecraft:grass_block",
+    "result": "minecraft:end_stone"
+  },
+  {
+    "block": "minecraft:end_portal_frame",
+    "result": {
+      "block": "minecraft:end_portal_frame",
+      "copyProperties": true,
+      "properties": {
+        "eye": "true"
+      }
+    }
+  },
+  {
+    "blocks": ["minecraft:oak_stairs","minecraft:spruce_stairs"],
+    "result": {
+      "block": "minecraft:end_stone_brick_stairs",
+      "copyProperties":true
+    }
+  },
+  {
+    "item": "minecraft:bow",
+    "result": [
+      "minecraft:bow",
+      "minecraft:stone_pickaxe",
+      "minecraft:iron_sword",
+      "minecraft:diamond_sword"
+    ]
+  },
+  {
+    "item": "minecraft:apple",
+    "result": {
+      "item":       "minecraft:diamond_axe",
+      "properties" : {
+        "Enchantments": [
+          { "id": "minecraft:sharpness",
+            "lvl": "5s"
+          },
+          { "id": "minecraft:unbreaking",
+            "lvl": "3s"
+          },
+          { "id": "minecraft:mending",
+            "lvl": "1s"
+          }
+        ]
+      }
+    }
+  },
+  "# EMPTY as an item results in the lack of an item. So with 8 valid entries, you have 4 in 8 chance of no head gear,",
+  "# 2 in 8 chance of leather helmet, and a 1 in 8 chance each for either iron or golden helmet.",
+  {
+    "entity": "minecraft:husk",
+    "result": [
+      "minecraft:husk"
+    ],
+    "inventory": {
+      "head": {
+        "item": [
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "EMPTY",
+          "minecraft:leather_helmet",
+          "minecraft:leather_helmet",
+          "minecraft:iron_helmet",
+          "minecraft:golden_helmet"
+        ]
+      }
+    }
+  },
+  "# Applying the inventory data to specific results allows the inventory items to be grouped together",
+  {
+    "entity": "minecraft:skeleton",
+    "inventory": {
+      "mainhand" : ["minecraft:stone_sword","minecraft:stone_sword","minecraft:stone_sword",
+        "minecraft:iron_sword","minecraft:iron_sword",
+        "minecraft:diamond_sword"],
+      "offhand" : ["EMPTY","minecraft:shield","minecraft:shield"]
+    },
+    "result": [
+      {
+        "entity": "minecraft:skeleton",
+        "inventory": {
+          "head": "minecraft:golden_helmet",
+          "chest": "minecraft:golden_chestplate",
+          "legs": "minecraft:golden_leggings",
+          "feet": "minecraft:golden_boots"
+        }
+      },
+      {
+        "entity": "minecraft:skeleton",
+        "inventory": {
+          "head": "minecraft:iron_helmet",
+          "chest": "minecraft:iron_chestplate",
+          "legs": "minecraft:iron_leggings",
+          "feet": "minecraft:iron_boots"
+        }
+      },
+      {
+        "entity": "minecraft:skeleton",
+        "inventory": {
+          "head": "minecraft:leather_helmet",
+          "chest": "minecraft:leather_chestplate",
+          "legs": "minecraft:leather_leggings",
+          "feet": "minecraft:leather_boots"
+        }
+      }
+    ]
+  },
+  {
+    "entity": "minecraft:zombie",
+    "result": {
+      "entity":"minecraft:zombie",
+      "inventory": {
+        "head": {
+          "item": "minecraft:cauldron"
+        }
+      }
+    }
+  }
+]
