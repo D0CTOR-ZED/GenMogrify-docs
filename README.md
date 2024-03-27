@@ -93,7 +93,7 @@ For items, "EMPTY" can be used in place of an item resource location.
 To be a block mogrification, the object must have "block", "blocks", or "type" as a key.
 
 _All key/value pairs are optional._
-```json
+```
 {
   "type"                  : "block" | "blocks",
   "block" | "blocks"      : TARGET_RESOURCE_LOCATION,
@@ -113,7 +113,7 @@ A block might have properties like "facing" or "powered".
 
 _Example:_
 
-```json lines
+```
 {
   "facing"  : "north",
   "powered" : "true"
@@ -137,7 +137,7 @@ The "properties" key is used to set block state properties of the target block.
 
 _All key/value pairs are optional._
 
-```json lines
+```
 {
   "block" | "blocks"  : RESULT_RESOURCE_LOCATION,
   "copyProperties"    : true | false,
@@ -156,7 +156,7 @@ To be an entity mogrification, the object must have "entity", "entities", or "ty
 The starting inventory of the resulting entity can be specified using the "inventory" key.
 
 _All key/value pairs are optional._
-```json lines
+```
 {
   "type"                  : "entity" | "entities",
   "entity" | "entities"   : TARGET_RESOURCE_LOCATION,
@@ -170,7 +170,7 @@ _All key/value pairs are optional._
 
 Listed slots will have their starting inventory overwritten.
 
-```json lines
+```
 {
     "head": RESULT_RESOURCE_LOCATION,
     "chest": RESULT_RESOURCE_LOCATION,
@@ -198,7 +198,7 @@ Inventory defined here will be merged with any defined in the ENTITY_GEN_MOG.
 
 _All key/value pairs are optional._
 
-```json lines
+```
 {
   "entity" | "entities"  : RESULT_RESOURCE_LOCATION,
   "inventory"            : STARTING_EQUIPMENT
@@ -217,7 +217,7 @@ exactMatchProperties of true means that not only must the item have the given pr
 but it also must not have any additional properties.
 
 _All key/value pairs are optional._
-```json lines
+```
 {
   "type"                 : "item" | "items",
   "item" | "items"       : TARGET_RESOURCE_LOCATION,
@@ -234,7 +234,7 @@ Properties are objects with key/value pairs.
 
 _Example:_
 
-```json lines
+```
 {
   "Enchantments": [
     {
@@ -267,7 +267,7 @@ although if `"properties"` is also defined here, those properties will be added 
 
 _All key/value pairs are optional._
 
-```json lines
+```
 {
   "entity" | "entities" : RESULT_RESOURCE_LOCATION,
   "properties"          : STARTING_EQUIPMENT,
@@ -324,7 +324,7 @@ Practically, they do not require any special handling by the user of this mod.
 I only mention it as an example of how something else might present a challenge.
 
 One last example....
-adding a weapon or armor to an entity doesn't mean that they will being able to render either.
+adding a weapon or armor to an entity doesn't mean that they will be able to render them.
 If you give equipment to a skeleton or zombie, they will render it without issue.
 If you give them to an enderman or villager, don't expect to be able to see it.
 At this point, I can't even say for certain if they would have any effect,
