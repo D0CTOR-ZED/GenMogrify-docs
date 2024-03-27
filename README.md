@@ -45,7 +45,7 @@ It should typically be an array of objects.
 #### GEN_MOG_COMMENT:
 
 Comments are text strings prefixes with a hash (`#`), double-slash (`//`), or slash-asterisk (`/*`). They can be
-included in an array of gen mog objects if desired.
+included in the GEN_MOG_DATA if desired.
 
 `"# comment"` | `"// comment"` | `"/* comment */"`
 
@@ -99,7 +99,6 @@ _All key/value pairs are optional._
   "block" | "blocks"      : TARGET_RESOURCE_LOCATION,
   "tag" | "tags"          : TARGET_RESOURCE_LOCATION,
   "properties"            : BLOCK_PROPERTIES,
-  "exactMatchProperties"  : true | false, (unused here, save for items)
   "result"                : RESULT_BLOCK
 }
 ```
