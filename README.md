@@ -172,12 +172,12 @@ Listed slots will have their starting inventory overwritten.
 
 ```
 {
-    "head": RESULT_RESOURCE_LOCATION,
-    "chest": RESULT_RESOURCE_LOCATION,
-    "legs": RESULT_RESOURCE_LOCATION,
-    "feet": RESULT_RESOURCE_LOCATION,
-  "mainhand": RESULT_RESOURCE_LOCATION,
-  "offhand": RESULT_RESOURCE_LOCATION
+  "head"      : RESULT_RESOURCE_LOCATION,
+  "chest"     : RESULT_RESOURCE_LOCATION,
+  "legs"      : RESULT_RESOURCE_LOCATION,
+  "feet"      : RESULT_RESOURCE_LOCATION,
+  "mainhand"  : RESULT_RESOURCE_LOCATION,
+  "offhand"   : RESULT_RESOURCE_LOCATION
 }
 ```
 
@@ -192,7 +192,6 @@ If an array of results is given, one will be selected at random each transmogrif
 #### RESULT_ENTITY_OBJECT:
 
 In the absence of an "entity"|"entities" key, the result entity will be the same as the target entity.
-The "properties" key is used to set block state properties of the target block.
 The starting inventory of the resulting entity can be specified using the "inventory" key.
 Inventory defined here will be merged with any defined in the ENTITY_GEN_MOG.
 
