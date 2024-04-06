@@ -125,6 +125,10 @@ This is the result of the transmogrification.
 The result can be a resource location, an object, or an array.
 If an array of results is given, one will be selected at random each transmogrification.
 
+If the result key/value pair is omitted, a horizontally adjacent block that is within the same chunk boundary and isn't also a target of mogrificaton will be selected as the result block.
+In the event that no such block is available, the resulting block will be air.
+Please note that such mogrifications will be time consuming if done on very common blocks.
+
 `"RESOURCE_LOCATION"` | `RESULT_BLOCK_OBJECT` | `[RESULT_BLOCK]`
 
 #### RESULT_BLOCK_OBJECT:
